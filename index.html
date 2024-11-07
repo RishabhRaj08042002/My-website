@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rishabh Raj - Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+    }
+
+    .header-container {
+      background-image: url('./assets/bg-texture.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-content {
+      background-image: linear-gradient(to right, rgba(20, 20, 20, 0.8), rgba(20, 20, 20, 0.8)), url('./assets/hero-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-blend-mode: multiply;
+      padding: 10rem 0 5rem 0; /* Updated Padding */
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .skills-container {
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1));
+      backdrop-filter: blur(5px);
+    }
+
+    .skill-item {
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .skill-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-card {
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .testimonial-card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .contact-section {
+      background: linear-gradient(to bottom, #121212, #121212);
+      color: white;
+      padding: 5rem 0;
+    }
+
+    .btn-primary {
+      background-image: linear-gradient(to right, #007bff, #00c292);
+      border: none;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-primary:hover {
+      opacity: 0.9;
+    }
+
+    .footer-container {
+      background: #121212;
+      color: white;
+      padding: 2rem 0;
+    }
+
+    .footer-container a {
+      color: rgba(255, 255, 255, 0.7);
+      transition: color 0.3s ease-in-out;
+    }
+
+    .footer-container a:hover {
+      color: white;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .hero-content h1 {
+        font-size: 3rem;
+      }
+
+      .hero-content p {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body class="overflow-x-hidden">
+  <header class="header-container py-4">
+    <div class="container mx-auto px-4">
+      <nav class="flex items-center justify-between">
+        <div class="text-2xl font-bold text-white">
+          RISHABH RAJ
+        </div>
+        <ul class="hidden md:flex space-x-6">
+          <li><a href="#home" class="text-white hover:text-gray-300">Home</a></li>
+          <li><a href="#about" class="text-white hover:text-gray-300">About</a></li>
+          <li><a href="#skills" class="text-white hover:text-gray-300">Skills</a></li>
+          <li><a href="#projects" class="text-white hover:text-gray-300">Projects</a></li>
+          <li><a href="#education" class="text-white hover:text-gray-300">Education</a></li>
+          <li><a href="#experience" class="text-white hover:text-gray-300">Experience</a></li>
+          <li><a href="#certificates" class="text-white hover:text-gray-300">Certificates</a></li>
+          <li><a href="#achievements" class="text-white hover:text-gray-300">Achievements</a></li>
+          <li><a href="#contact" class="text-white hover:text-gray-300">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="hero-content py-24">
+    <div class="container mx-auto px-4">
+      <div class="text-center text-white">
+        <h1 class="text-5xl md:text-6xl font-bold mb-4">
+          Hello, I'm Rishabh Raj
+        </h1>
+        <p class="text-xl md:text-2xl mb-8">
+          A Full Stack Developer & Creative Web Designer
+        </p>
+        <a href="#contact" class="btn btn-primary px-8 py-4 rounded-full">Hire Me</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-24 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <h2 class="section-title text-gray-800">About Me</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <img src="./assets/about-me.jpg" alt="Rishabh Raj" class="rounded-lg w-full"> 
+        </div>
+        <div>
+          <p class="text-gray-700 mb-4">
+          I'm a passionate and experienced Full Stack Developer with a keen eye for design and user experience.
+          Throughout my career, I have dedicated myself to crafting exceptional web solutions that seamlessly blend functionality and visual appeal.
+          My journey has equipped me with a deep understanding of a variety of programming languages, frameworks, and technologies, enabling me to tackle various challenges with confidence and creativity.
+          Beyond my technical expertise, I'm eager to collaborate with you to bring your vision to life, providing intuitive and enjoyable experiences for your users. 
+          </p>
+          <a href="#" class="btn btn-primary px-8 py-4 rounded-full">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="skills" class="py-24 skills-container">
+    <div class="container mx-auto px-4">
+      <h2 class="section-title text-gray-800">My Skills</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="bg-white shadow-md rounded-lg p-6 text-center skill-item">
+          <i class="fab fa-java text-3xl text-orange-500 mb-2"></i>
+          <p>Java</p>
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-6 text-center skill-item">
+          <i class="fab fa-flutter text-3xl text-blue-500 mb-2"></i>
+          <p>Flutter</p>
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-6 text-center skill-item">
+          <i class="fab fa-html5 text-3xl text-orange-500 mb-2"></i>
+          <p>HTML5</p>
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-6 text-center skill-item">
+          <i class="fab fa-css3-alt text-3xl text-blue-500 mb-2"></i>
+          <p>CSS3</p>
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-6 text-center skill-item">
+          <i class="fab fa-js-square text-3xl text-yellow-500 mb-2"></i>
+          <p>JavaScript</p>
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-6 text-center skill-item">
+          <i class="fab fa-react text-3xl text-blue-600 mb-2"></i>
+          <p>React</p>
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-6 text-center skill-item">
+          <i class="fab fa-node-js text-3xl text-green-500 mb-2"></i>
+          <p>Node.js</p>
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-6 text-center skill-item">
+          <i class="fas fa-database text-3xl text-blue-500 mb-2"></i>
+          <p>MongoDB</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="projects" class="py-24 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <h2 class="section-title text-gray-800">My Projects</h2>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="project-card bg-white rounded-lg shadow-md p-6">
+              <img src="./assets/project-1.jpg" alt="Project 1" class="rounded-lg mb-4">
+              <h3 class="text-xl font-bold mb-2">Vira Fitness</h3>
+              <p>Designed and Developed the front-End of a mobile application consisting of various features like different exercises suggestions as per different body types, BMI calculator and steps tracker which is built on Flutter platform and with the firebase as a database.</p>
+              <a href="#" class="btn btn-primary px-6 py-3 rounded-full">View Details</a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="project-card bg-white rounded-lg shadow-md p-6">
+              <img src="./assets/project-2.jpg" alt="Project 2" class="rounded-lg mb-4">
+              <h3 class="text-xl font-bold mb-2">Employee Management System</h3>
+              <p>Designed and developed a dynamic web application. The Employee Management System is a web application that uses HTML, CSS, and React.js for an engaging user interface. Node.js powers the backend, managing server requests and logic, while MongoDB provides flexible data storage for employee records. This technology stack enhances HR efficiency and streamlines employee management processes.</p>
+              <a href="#" class="btn btn-primary px-6 py-3 rounded-full">View Details</a>
+            </div>
+          </div>
+          
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="py-24 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <h2 class="section-title text-gray-800">Education</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-white shadow-md rounded-lg p-6">
+              <h3 class="text-xl font-bold mb-2">Bachelor’s In Engineering in CSE</h3>
+              <p class="text-gray-700">SLIET, Punjab</p>
+              <p class="text-gray-700">CGPA: 8.68 | (2023)</p>
+              
+          </div>
+          <div class="bg-white shadow-md rounded-lg p-6">
+              <h3 class="text-xl font-bold mb-2">Diploma in CSE</h3>
+              <p class="text-gray-700">SLIET, Punjab</p>
+              <p class="text-gray-700">CGPA: 8.94 | (2020)</p>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="py-24 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <h2 class="section-title text-gray-800">Experience</h2>
+      <div class="grid grid-cols-1 md:grid-cols-1 gap-8">
+          <div class="bg-white shadow-md rounded-lg p-6">
+              <h3 class="text-xl font-bold mb-2">Associate Software Developer Intern</h3>
+              <p class="text-gray-700">RAD Tech Pro Services</p>
+              <p class="text-gray-700">Worked as a full stack developer with HTML, CSS, JavaScript and React.js for frontend and node.js and MongoDB for backend with expertise in REST APIs.</p>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="certificates" class="py-24 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <h2 class="section-title text-gray-800">Certificates and Training</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white shadow-md rounded-lg p-6">
+              <h3 class="text-xl font-bold mb-2">Certified Training in Core Java</h3>
+          </div>
+          <div class="bg-white shadow-md rounded-lg p-6">
+              <h3 class="text-xl font-bold mb-2">Certified Training in Flutter for mobile application development</h3>
+          </div>
+          <div class="bg-white shadow-md rounded-lg p-6">
+              <h3 class="text-xl font-bold mb-2">Certified Training and web development in MERN Stack</h3>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="achievements" class="py-24 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <h2 class="section-title text-gray-800">Achievements / Hobbies</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-white shadow-md rounded-lg p-6">
+              <ul class="list-disc list-inside">
+                  <li>Member of the "Institution of Engineers, SLIET".</li>
+                  <li>Awarded as Special "Merit Award" for being the best student twice in 2014 (class 8th) and in 2016 (class 10th).</li>
+                  <li>Ex NCC Cadet.</li>
+                  <li>Played Intra District Badminton Championship in 2015.</li>
+              </ul>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <div class="container mx-auto px-4">
+      <h2 class="section-title text-white">Contact Me</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <p class="text-white mb-4">
+            Feel free to reach out if you have any questions or would like to discuss a project.
+          </p>
+          <p class="text-white">
+            <i class="fas fa-envelope mr-2"></i>
+            rishabhraaj484@gmail.com
+          </p>
+          <p class="text-white">
+            <i class="fas fa-phone mr-2"></i>
+            (+91) 9304077290
+          </p>
+          <p class="text-white">
+            <i class="fab fa-linkedin mr-2"></i>
+            www.linkedin.com/in/rishabh-raj-a9b948229
+          </p>
+          <p class="text-white">
+            <i class="fab fa-github mr-2"></i>
+            https://github.com/RishabhRaj08042002
+          </p>
+        </div>
+        <div>
+          <form action="https://getform.io/f/1f8f548a-36bd-4d90-973f-b47956f6d422" method="POST" class="bg-gray-800 rounded-lg p-6">
+            <div class="mb-4">
+              <input type="text" name="name" placeholder="Name" required class="w-full px-4 py-3 border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600">
+            </div>
+            <div class="mb-4">
+              <input type="email" name="email" placeholder="Email" required class="w-full px-4 py-3 border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600">
+            </div>
+            <div class="mb-4">
+              <textarea name="message" placeholder="Message" rows="4" required class="w-full px-4 py-3 border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary px-8 py-4 rounded-full">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="footer-container">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; 2023 Rishabh Raj. All Rights Reserved.</p>
+      <ul class="flex items-center justify-center mt-4">
+        <li class="ml-4"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+        <li class="ml-4"><a href="#"><i class="fab fa-twitter"></i></a></li>
+        <li class="ml-4"><a href="#"><i class="fab fa-instagram"></i></a></li>
+        <li class="ml-4"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    // Swiper initialization
+    const swiper = new Swiper('.swiper-container', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+
+    // ScrollReveal initialization
+    ScrollReveal().reveal('.section-title', {
+      duration: 1000,
+      distance: '50px',
+      origin: 'bottom',
+    });
+
+    ScrollReveal().reveal('.hero-content', {
+      duration: 1500,
+      distance: '50px',
+      origin: 'bottom',
+    });
+
+    ScrollReveal().reveal('.skill-item', {
+      duration: 1000,
+      distance: '50px',
+      origin: 'bottom',
+      interval: 200
+    });
+
+    ScrollReveal().reveal('.project-card', {
+      duration: 1000,
+      distance: '50px',
+      origin: 'bottom',
+      interval: 200
+    });
+
+    ScrollReveal().reveal('.testimonial-card', {
+      duration: 1000,
+      distance: '50px',
+      origin: 'bottom',
+      interval: 200
+    });
+  </script>
+</body>
+</html>
